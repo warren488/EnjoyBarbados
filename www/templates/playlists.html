@@ -5,17 +5,17 @@
 
 
 
-    <div class="list card" ng-click="openMyPage()">
+    <div class="list card" ng-repeat="jack in heading">
 
   <div class="item item-avatar">
-    <img src="mcfly.jpg">
-    <h2>header</h2>
+  
+    <h2>{{jack.first}}</h2>
   </div>
 
-  <div class="item item-body">
+  <div class="item item-body" >
   <img class="full-image" src="img/bim.jpg">
-    <p>
-<!-- body -->
+    <p ng-init='first="cars"'>
+<!-- body -->{{jack.text}}
     </p>
     <!-- <p>
       <a href="#" class="subdued">1 Like</a>
