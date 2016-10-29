@@ -1,0 +1,4 @@
+.controller('InfoCtrl', function(){
+
+  
+})
