@@ -1,30 +1,31 @@
-<ion-view view-title="Playlists">
+<ion-view view-title="Discover">
   <ion-content>
 
 
+<a href="#/info/map">my places page</a>
 
 
+    <div class="list card" ng-repeat="x in test">
+      <a href={{x.ref}} id="cards">
 
-    <div class="list card" ng-repeat="jack in heading">
+      <div class="item">
 
-  <div class="item item-avatar">
-  
-    <h2>{{jack.first}}</h2>
-  </div>
+        <h2>{{x.first}}</h2>
+      </div>
 
-  <div class="item item-body" >
-  <img class="full-image" src="img/bim.jpg">
-    <p ng-init='first="cars"'>
-<!-- body -->{{jack.text}}
-    </p>
-    <!-- <p>
-      <a href="#" class="subdued">1 Like</a>
-      <a href="#" class="subdued">5 Comments</a>
-    </p> -->
-  </div>
+      <div class="item item-body" >
+      <img class="full-image" src={{x.src}}>
+        <p>
+    <!-- body -->{{x.text}}
+        </p>
+        <!-- <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p> -->
+      </div>
 
-</div>
-
+    </a>
+    </div>
 
 
   </ion-content>

@@ -6,8 +6,6 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', ['ionic', 'starter.controllers'])
 
-
-
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -33,6 +31,45 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     templateUrl: 'templates/menu.html',
     controller: 'AppCtrl'
   })
+
+  .state('info', {
+    url: '/info',
+    abstract: true,
+    templateUrl: 'templates/Info.html'
+
+  })
+
+
+  .state('rih', {
+    url: '/rih',
+    templateUrl: 'templates/rih-info.html',
+    controller: 'RihCtrl'
+
+  })
+
+  .state('info.map',{
+    url: '/map',
+    views: {
+      'info-map': {
+        templateUrl: 'templates/info-map.html',
+        conroller: 'mapCtrl'
+      }
+    }
+  })
+
+
+
+  .state('info.places',{
+    url: '/places',
+    views: {
+      'info-places': {
+        templateUrl: 'templates/info-places.html',
+        conroller: 'placesCtrl'
+      }
+    }
+  })
+
+
 
   .state('app.search', {
     url: '/search',

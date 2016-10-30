@@ -41,55 +41,25 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope, userService) {
 
-  $scope.heading= [{
-      first:"Cultural Aspects",
-      text:"Welcome to Barbados, one of the most beautiful islands in the Caribbean. blah blah",
-      src: '<img class="full-image" src="img/bim.jpg">'
-
-  },
-{
-      first:"Accomodation",
-      text:"We seek to provide you with a wonderful variety of hotels for you to slect from."
-
-},
-{
-      first:"Restaurants",
-      text:"There are numerous restaurants which you can indulge in while on the island."
-},
-{
-      first:"Nightlife",
-      text:"Are you looking for a wonderful night in the club or at a party? Well you've come to the right place!"
-
-},
-{
-      first:"On the Go(Transportation)",
-      text:"For persons looking to be on the go this page is for you."
-
-},
-{
-      first:"Search",
-      text:"Search for a particular activity or service and we will try to provide you with all the related activities"
+  $scope.test = userService.getHeading();
+  console.log($scope.test);
 
 
-},
-{
-      first:"Map",
-      text:"This is for you to get a view of the map and many of the landmarks available"
 
-}];
-
-
-  $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
-  ];
 })
 
+
+
+
+
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+})
+
+.controller('RihCtrl', function($scope, $stateParams) {
+})
+
+.controller('mapCtrl', function($scope, $stateParams) {
 });
